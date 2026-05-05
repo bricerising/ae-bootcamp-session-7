@@ -8,7 +8,7 @@
 
 ## Service Context
 
-<!-- Copilot: summarize what the todo-service is and how it will be hosted (from docs/project-overview.md) -->
+The todo-service is a full-stack task management application with a Node.js 20 / Express 4 backend API and a React 18 frontend SPA. It uses in-memory storage for todos and exposes a REST API at `/api/todos`. The service will be containerised and deployed to AWS ECS Fargate behind an Application Load Balancer, with CloudWatch Logs and Container Insights for observability. Infrastructure is provisioned via the Slalom PE Lab ECS App golden-path Terraform module, which creates the VPC, ECS cluster, ECR repositories, ALB, security groups, and IAM roles.
 
 ---
 
