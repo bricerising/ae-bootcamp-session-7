@@ -8,7 +8,7 @@
 
 ## Service Context
 
-<!-- Copilot: summarize the tech stack (Node.js version, test framework, IaC tool) that CI must validate (from docs/project-overview.md) -->
+The todo-service uses Node.js 20 with Express 4 (backend) and React 18 (frontend), managed as npm workspaces. Tests run with Jest (coverage threshold: 80% lines/branches). Linting uses ESLint. Infrastructure is defined in Terraform (>= 1.5, AWS provider ~> 5.0) and validated with tflint and checkov. Docker images are built for both packages (backend on port 4000, frontend nginx on port 80). CI must validate all of these layers on every PR and deploy on merge to main.
 
 ## Reusable Workflow (`golden-path-ci.yml`)
 
